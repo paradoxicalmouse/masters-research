@@ -1,0 +1,5 @@
+#! /bin/sh
+pdflatex mypaper
+bibtex mypaper
+pdflatex mypaper
+pdflatex mypaper
