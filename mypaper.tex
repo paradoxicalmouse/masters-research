@@ -36,13 +36,19 @@ their statistics found on Kaggle.com. Each row of the data represents a
 single question and includes the title, body, score (a metric used by Stack
 Overflow to determine the quality of a question), closed date (if the
 question was closed), and owner ID. Additionally, separate tables include
-answer and tag data for each question. 
+answer and tag data for each question.
+The answer table contains each of the answers for each question and their
+data. Each answer contains the answer body, creation data, score, and owner
+ID. Finally, the tags table contains all of the tags for each question. 
 
 Each Stack Overflow question typically contains a single sentence title. 
 Often, a simplified version of the question appears in the title; however,
 the primary text and background for the coding question appears in the body.
 The body can contain Markdown or HTML code, including a special tag to allow
-for code to be included within the question body: {\tt <code>}.
+for code to be included within the question body: {\tt <code>}. 
+
+\subsection{Data Pre-Processing}
+
 
 \section{Results}
 
