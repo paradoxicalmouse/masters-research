@@ -43,10 +43,12 @@ def cleanData (
                 tokens =  tknzr.tokenize(row[6])
 
                 # remove stop words
-                tokens = [w for w in tokens if not w in stop_words] 
+                if removeEnglishStopWords:
+                    tokens = [w for w in tokens if not w in stop_words] 
             
                 # take tokens down to their stems
-                tokens = [ps.stem(w) for w in tokens]
+                if stemTokens:
+                    tokens = [ps.stem(w) for w in tokens]
 
                 # print the tokens for verification that it worked.
                 print(tokens)
