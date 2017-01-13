@@ -7,6 +7,8 @@
 \begin{abstract}
 \end{abstract}
 \section{Introduction}
+
+
 \section{Background}
 The average programmer today is familiar with Stack Overflow, a forum
 designed for asking and answering programming related questions. Stack
@@ -47,8 +49,20 @@ the primary text and background for the coding question appears in the body.
 The body can contain Markdown or HTML code, including a special tag to allow
 for code to be included within the question body: {\tt <code>}. 
 
-\subsection{Data Pre-Processing}
+In order to predict whether a question will be closed, answered, or left
+open and unanswered, we need to be able to gather the information of whether
+or not the training questions have been answered. This is problematic, as
+the initial form of the dataset has each answer as its own row in the
+Answers table. While these answers tell their parentID, i.e. the question
+they are given in response to, the entire table must be navigated to search
+for at least one occurence of our question's ID in the Answers table.
 
+In the cases where the question is closed, this step does not apply, as we
+would categorize the question as "closed", and thus not answered. However,
+in the other cases, this process can be rather time consuming. To speed up
+this process during initial creation, we can shortcut out of the search when
+we find an answer to a particular question and mark the question as
+answered.
 
 \section{Results}
 
