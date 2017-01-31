@@ -16,3 +16,5 @@ meta(questionsCorp, tag = "Score")<-questions$Score
 meta(questionsCorp, tag = "Title")<-questions$Title
 
 questionsDTM <- DocumentTermMatrix(questionsCorp)
+#http://stackoverflow.com/questions/21163207/document-term-matrix-for-naive-bayes-classfier-unexpected-results-r
+#may help from here.
